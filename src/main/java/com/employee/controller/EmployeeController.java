@@ -23,4 +23,10 @@ public class EmployeeController
     {
         return service.findEmployeeByID(id);
     }
+
+    @PostMapping("/deleteById/{id}")
+    public void deleteEmployeeByID(@PathVariable long id)
+    {
+        service.deleteEmployeeByID(id);
+    }
 }

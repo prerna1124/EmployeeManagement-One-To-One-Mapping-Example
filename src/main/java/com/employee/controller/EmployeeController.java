@@ -29,4 +29,10 @@ public class EmployeeController
     {
         service.deleteEmployeeByID(id);
     }
+
+    @PostMapping("/updateEmployee/{id}")
+    public EmployeeModel updateEmployeeById(@PathVariable long id, @RequestBody EmployeeModel empDetails)
+    {
+        return service.updateEmployeeById(id,empDetails);
+    }
 }
